@@ -27,8 +27,9 @@ function createBoxes(amount) {
     box.style.margin = '5px';
     boxSize += 10;
 
-    boxesContainer.append(box);
+    boxElements.push(box);
   }
+  boxesContainer.append(...boxElements);
 }
 
 createButton.addEventListener('click', () => {

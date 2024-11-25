@@ -29,9 +29,10 @@ const imagesList = document.querySelector('.gallery');
 console.log(imagesList);
 
 const markup = images
-  .map(image => `<img src=${image.url} alt=${image.alt}>`)
+  .map(
+    image =>
+      `<img src="${image.url}" alt="${image.alt}" style="margin: 10px; max-width: 100%; height: auto;">`
+  )
   .join('');
 
-images.forEach(image => {
-  imagesList.insertAdjacentHTML('beforeend', markup);
-});
+imagesList.insertAdjacentHTML('beforeend', markup);
